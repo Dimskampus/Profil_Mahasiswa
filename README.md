@@ -1,17 +1,22 @@
-# profil_mahasiswa
+# Profil Mahasiswa
 
-A new Flutter project.
+Aplikasi Flutter untuk tugas Form Profil Mahasiswa (State, Event, Navigation, dan ViewModel).
 
-## Getting Started
+Dibuat oleh: Dimas Putra Wijaya (NIM 2411031, kelas IFB5J)
 
-This project is a starting point for a Flutter application.
+## Fitur
+- Beranda: kartu mahasiswa, ringkasan, dan daftar mata kuliah
+- Form Profil: nama, NIM, kelas, program studi, status aktif, foto profil (kamera atau galeri), validasi, dan pratinjau langsung
+- Detail Mata Kuliah: data dikirim lewat argumen route
+- Kontak: email, nomor HP, dan username GitHub dengan validasi
 
-A few resources to get you started if this is your first Flutter project:
+## Konsep yang dipakai
+- State dan event: `ProfilViewModel` (`ChangeNotifier`) dibagikan lewat `ProfilScope` (`InheritedNotifier`). UI di-build ulang setiap `notifyListeners()` dipanggil.
+- Navigasi: named routes dengan `onGenerateRoute`.
+- Lifecycle: `WidgetsBindingObserver` dengan log berawalan `[SiklusHidup]`.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Menjalankan
+Jalankan `flutter pub get`, lalu `flutter run`.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Dependensi tambahan
+- `image_picker` untuk mengambil foto profil
